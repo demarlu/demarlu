@@ -13,7 +13,7 @@ const Header = () => {
       </div>
 
       {/* Desktop Menu */}
-      <nav className="hidden md:flex space-x-12 font-medium">
+      <nav className="hidden md:flex space-x-12 font-semibold text-black-600">
         <Link href="/how-it-works">How it Works</Link>
         <Link href="/about-us">About us</Link>
       </nav>
@@ -26,7 +26,7 @@ const Header = () => {
       </div>
 
       {/* Desktop Menu */}
-      <nav className="hidden md:flex space-x-12 font-medium">
+      <nav className="hidden md:flex space-x-12 font-semibold text-black-600">
         <Link href="/touring">Touring</Link>
         <Link href="/services">Services</Link>
       </nav>
@@ -34,7 +34,7 @@ const Header = () => {
       {/* Contact Button */}
       <div>
         
-        <button className="  border-2 border-black-950    font-medium rounded-lg  px-5 py-2 text-center mr-2 mb-2">
+        <button className="  border-2 border-black-950  font-semibold text-black-600 rounded-lg  px-5 py-2 text-center mr-2 mb-2">
           Contact Us
         </button>
       </div>

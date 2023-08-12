@@ -1,32 +1,32 @@
-import React from 'react'
+import { ServicesData } from "@/data/services";
+import React from "react";
 
 const ServicePreview = () => {
   return (
-    <div className='py-16'>
-        <h1 className="text-center mb-4 text-4xl font-semibold tracking-tight leading-none">
-            Some of our Services
-        </h1>
-    
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-12 ">
-        <div className="p-4 border-2 border-yellow-400 rounded-lg">
-            <h1>Accomodation </h1>
-        </div>
+    <div className="py-16 px-4">
+      <h1 className="text-center mb-4 text-4xl text-black-700 font-semibold tracking-tight leading-none">
+        Some of our Services
+      </h1>
 
-        <div className="p-4 border-2 border-yellow-400 rounded-lg">
-            <h1>Tours </h1>
-        </div>
-        <div className="p-4 border-2 border-yellow-400 rounded-lg">
-            <h1>Transport </h1>
-        </div>
-        <div className="p-4 border-2 border-yellow-400 rounded-lg">
-            <h1>Wedding Venues </h1>
-        </div>
-        <div className="p-4 border-2 border-yellow-400 rounded-lg">
-            <h1>Schools & Colleges </h1>
-        </div>
-    </section>
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-12 ">
+        {ServicesData.map((service) => (
+          <div
+            className="p-4 border-2 border-yellow-400 bg-yellow-50 rounded-lg"
+            key={service.id}
+          >
+            <h1 className="text-2xl py-3">{service.title} </h1>
+            <ul className="px-2">
+              {service.offers.map((offer, index) => (
+                <li key={index} className="list-disc">
+                  {offer}{" "}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default ServicePreview
+export default ServicePreview;
