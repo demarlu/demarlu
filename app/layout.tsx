@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'De-Marlu',
-  description: '...the world',
+  description: 'unlock your travel & destination experience ',
 }
 
 export default function RootLayout({
