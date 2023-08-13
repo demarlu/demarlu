@@ -20,27 +20,31 @@ const ToursPreview = ({ title, img, url, duration }: Props) => {
           className={` bg-cover bg-center  rounded-lg relative h-72 lg:h-[35rem]`}
           style={{ backgroundImage: `url(${img})` }}
         >
-          <div className="flex absolute bottom-1 p-2 w-full  text-yellow-400  ">
-            <BiSolidStar size={24} />
-            <BiSolidStar size={24} />
-            <BiSolidStar size={24} />
-            <BiSolidStar size={24} />
-            <BiSolidStarHalf size={24} />
+          <div className="flex j absolute bottom-1 justify-between p-2 w-full  text-yellow-400  ">
+            <div className="flex  text-yellow-400  ">
+              <BiSolidStar size={24} />
+              <BiSolidStar size={24} />
+              <BiSolidStar size={24} />
+              <BiSolidStar size={24} />
+              <BiSolidStarHalf size={24} />
+            </div>
+
+            <div className="">
+              <Link
+                href={url}
+                className="border-2 border-black-950 bg-black-50  font-semibold text-black-600 rounded-lg  px-5 py-2 text-center mr-2 mb-2"
+              >
+                View Tour
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-2 py-2 content-center">
+        <div className="grid grid-cols-3 gap-2 py-4 ">
           <div className="col-span-2"> {title} </div>
+
           <div className="flex items-center justify-end space-x-3">
             <HiOutlineClock className="text-yellow-500" size={24} />
             <p className="">{duration} hrs</p>
-          </div>
-          <div className="col-span-3">
-            <Link
-              href={url}
-              className="border-2 border-black-950  font-semibold text-black-600 rounded-lg  px-5 py-2 text-center mr-2 mb-2"
-            >
-              View Tour
-            </Link>
           </div>
         </div>
       </figure>

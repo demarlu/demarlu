@@ -47,7 +47,7 @@ export default function Carousel({
         <button onClick={prev} className="px-2  ">
           <HiOutlineArrowNarrowLeft size={30} />
         </button>
-        <button onClick={next} className={!curr ? 'text-yellow-400' : ''}>
+        <button onClick={next} className={'text-yellow-400' }>
           <HiOutlineArrowNarrowRight size={30} />
         </button>
       </div>
@@ -71,7 +71,7 @@ export default function Carousel({
 
       
       </div>
-      <div className="absolute bottom-4 right-0 left-0 -z-10 ">
+      <div className="absolute -bottom-1 my-3 right-0 left-0 -z-10 ">
           <div className="flex items-center justify-center gap-2">
             {slides.map((_, i) => (
               <div
