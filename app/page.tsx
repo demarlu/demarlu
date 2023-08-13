@@ -4,12 +4,11 @@ import Container from "./components/AppWide/Container";
 import Header from "./components/AppWide/Header";
 import HeroSection from "./components/Home/HeroSection";
 import ServicePreview from "./components/Home/ServicePreview";
-import ToursPreview from "./components/Home/ToursPreview";
 
 export default function Home() {
   return (
     <main>
-      <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 lg:rounded-br-full">
+      <div className="bg-gradient-to-r lg:rounded-br-full">
         <Container>
           <Header />
           <HeroSection />
@@ -20,9 +19,9 @@ export default function Home() {
         <ServicePreview />
       </Container>
 
-      <div className="bg-gradient-to-b from-yellow-50 to-yellow-100 ">
+      <div className="bg-gradient-to-b ">
       <Container>
-      <Carousel slides={ToursData}/>
+      <Carousel slides={ToursData} autoSlide={true} autoSlideInterval={5000}/>
       </Container>
       </div>
     </main>

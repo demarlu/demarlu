@@ -4,7 +4,7 @@ import { SlMenu } from "react-icons/sl";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between py-3 px-6">
+    <header className="flex items-center justify-between py-3 ">
       {/* Mobile Menu */}
       <div className="md:hidden">
         <button className="inline-flex ">
@@ -34,7 +34,7 @@ const Header = () => {
       {/* Contact Button */}
       <div>
         
-        <button className="  border-2 border-black-950  font-semibold text-black-600 rounded-lg  px-5 py-2 text-center mr-2 mb-2">
+        <button className=" border-2 border-black-950  font-semibold text-black-600 rounded-2xl  px-5 py-2 text-center mr-2 mb-2">
           Contact Us
         </button>
       </div>

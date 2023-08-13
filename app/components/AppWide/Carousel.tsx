@@ -39,22 +39,22 @@ export default function Carousel({
   }, []);
 
   return (
-    <div className="py-16 px-4 overflow-hidden relative">
+    <div className="mb-6 px-4 overflow-hidden relative">
       <h1 className="text-center mb-2 text-4xl font-semibold tracking-tight leading-none">
         Tours
       </h1>
       <div className="flex items-center ">
         <button onClick={prev} className="px-2  ">
-          <HiOutlineArrowNarrowLeft size={56} />
+          <HiOutlineArrowNarrowLeft size={30} />
         </button>
-        <button onClick={next} className="px-2  ">
-          <HiOutlineArrowNarrowRight size={56} />
+        <button onClick={next} className={!curr ? 'text-yellow-400' : ''}>
+          <HiOutlineArrowNarrowRight size={30} />
         </button>
       </div>
 
       <div className=" ">
         <div
-          className="flex gap-8 transition-transform ease-in duration-1000"
+          className="flex  transition-transform ease-in duration-1000"
           style={{ transform: `translateX(-${curr * 100}%)` }}
         >
           {slides.map((tour) => (
@@ -71,7 +71,7 @@ export default function Carousel({
 
       
       </div>
-      <div className="absolute bottom-1 right-0 left-0 ">
+      <div className="absolute bottom-4 right-0 left-0 -z-10 ">
           <div className="flex items-center justify-center gap-2">
             {slides.map((_, i) => (
               <div
